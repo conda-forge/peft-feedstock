@@ -40,6 +40,8 @@ test:
 
 about:
   home: https://github.com/huggingface/peft
+  doc_url: https://huggingface.co/docs/peft
+  dev_url: https://github.com/huggingface/peft
   summary: Parameter-Efficient Fine-Tuning (PEFT)
   license: Apache-2.0
   license_file: LICENSE
