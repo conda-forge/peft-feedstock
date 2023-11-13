@@ -16,17 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - accelerate
     - numpy >=1.17
     - packaging >=20.0
     - psutil
-    - pyyaml
+    - python >=3.8
     - pytorch >=1.13.0
+    - pyyaml
+    - safetensors
     - transformers
-    - accelerate
+    - tqdm
 
 test:
   imports:
