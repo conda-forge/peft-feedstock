@@ -9,6 +9,10 @@ Package license: Apache-2.0
 
 Summary: Parameter-Efficient Fine-Tuning (PEFT)
 
+Development: https://github.com/huggingface/peft
+
+Documentation: https://huggingface.co/docs/peft
+
 Current build status
 ====================
 
