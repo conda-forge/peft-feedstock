@@ -1,5 +1,5 @@
 {% set name = "peft" %}
-{% set version = "0.3.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
-  sha256: bbdeee4de3653ee43cb6bbe7505816e6e9b4cf8275471be1707d9c253dfe8e0b
+  sha256: a1caa3ec7a09932880c61ce042daf26a524cda4583f806f5e3166c65f6e542e7
 
 build:
   noarch: python
@@ -16,17 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - accelerate
     - numpy >=1.17
     - packaging >=20.0
     - psutil
-    - pyyaml
+    - python >=3.8
     - pytorch >=1.13.0
+    - pyyaml
+    - safetensors
     - transformers
-    - accelerate
+    - tqdm
 
 test:
   imports:
@@ -38,6 +40,8 @@ test:
 
 about:
   home: https://github.com/huggingface/peft
+  doc_url: https://huggingface.co/docs/peft
+  dev_url: https://github.com/huggingface/peft
   summary: Parameter-Efficient Fine-Tuning (PEFT)
   license: Apache-2.0
   license_file: LICENSE
