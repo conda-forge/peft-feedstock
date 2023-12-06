@@ -1,5 +1,5 @@
 {% set name = "peft" %}
-{% set version = "0.6.2" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
-  sha256: 244ea9768e7de49dc41b068d3f9a32ca508e31d4223640566616633b6ed1331e
+  sha256: 3e7a256f974022f727081dfe12a12b553b907756e65ce04905152364e1a4c95d
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - accelerate >=0.21.0
+    - huggingface_hub >=0.17.0
     - numpy >=1.17
     - packaging >=20.0
     - psutil
@@ -37,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - transformers >=4.0.0
 
 about:
   home: https://github.com/huggingface/peft
