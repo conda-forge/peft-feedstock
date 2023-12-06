@@ -19,8 +19,8 @@ requirements:
     - python >=3.8
     - pip
   run:
-    - huggingface_hub >=0.17.0
     - accelerate >=0.21.0
+    - huggingface_hub >=0.17.0
     - numpy >=1.17
     - packaging >=20.0
     - psutil
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - transformers >=4.0.0
 
 about:
   home: https://github.com/huggingface/peft
