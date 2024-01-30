@@ -1,5 +1,5 @@
 {% set name = "peft" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
-  sha256: cd8fd190e1aacfdcb6c70df4e13c3e3b0006b1e9cc16ecf0a9804632edfcecd3
+  sha256: 138ad8bbea64bc95ede981c48b7283498a81e43dfc55e9cc0b51fabd9586538e
 
 build:
   noarch: python
