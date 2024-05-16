@@ -1,5 +1,5 @@
 {% set name = "peft" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
-  sha256: 36a7628c15f88d37abb26cfc74c22468f9037ee02e9c9b65de943cfe7c672049
+  sha256: bbce9b4e14f90e81355b94bbe40b40cade50ff144d87e7aa0d9088113aecd34b
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - pytorch >=1.13.0
     - pyyaml
     - safetensors
-    - transformers >=4.18.0
+    - transformers
     - tqdm
 
 test:
