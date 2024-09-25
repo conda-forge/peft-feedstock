@@ -16,8 +16,9 @@ build:
 
 requirements:
   host:
-    - python >=3.8
     - pip
+    - python >=3.8
+    - setuptools
   run:
     - accelerate >=0.21.0
     - huggingface_hub >=0.17.0
