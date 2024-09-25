@@ -1,5 +1,5 @@
 {% set name = "peft" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
-  sha256: 253205bd478e985ccdc7f04804aab9c95f479130c517bf6e474b8d509db5f4a4
+  sha256: 77c8fb671acf8134bace56cb957c2733b8cfc6f0c6aec78af0a4980ac4e88e92
 
 build:
   noarch: python
@@ -16,8 +16,9 @@ build:
 
 requirements:
   host:
-    - python >=3.8
     - pip
+    - python >=3.8
+    - setuptools
   run:
     - accelerate >=0.21.0
     - huggingface_hub >=0.17.0
