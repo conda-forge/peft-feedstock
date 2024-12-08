@@ -1,13 +1,14 @@
 {% set name = "peft" %}
-{% set version = "0.13.2" %}
+{% set version = "0.14.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
-  sha256: 0e0cbd40ebdf5fe4ea79f255880d02f96712d18899509369a2cc5768ad46d672
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/peft-{{ version }}.tar.gz
+  sha256: 546d69af7b42f5ef715a3d3261ed818bc917ae6055e5d7e187ed3f2c76ad72dc
 
 build:
   noarch: python
@@ -17,15 +18,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - accelerate >=0.21.0
-    - huggingface_hub >=0.17.0
+    - huggingface_hub >=0.25.0
     - numpy >=1.17
     - packaging >=20.0
     - psutil
-    - python >=3.8
+    - python >={{ python_min }}
     - pytorch >=1.13.0
     - pyyaml
     - safetensors
@@ -39,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/huggingface/peft
