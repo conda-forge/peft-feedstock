@@ -41,6 +41,7 @@ tests:
       imports:
         - peft
       pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   summary: Parameter-Efficient Fine-Tuning (PEFT)
