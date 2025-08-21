@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: peft
-  version: 0.17.0
-  python_min: 3.9
+  version: 0.17.1
+  python_min: '3.9'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/peft-${{ version }}.tar.gz
-  sha256: cb647a931c8da434446d6a196c402b1c2d087b12e050e098215f906f12771f1e
+  sha256: e6002b42517976c290b3b8bbb9829a33dd5d470676b2dec7cb4df8501b77eb9f
 
 build:
   number: 0
@@ -33,9 +33,8 @@ requirements:
     - pytorch >=1.13.0
     - pyyaml
     - safetensors
-    - transformers >=4.18.0
+    - transformers
     - tqdm
-
 tests:
   - python:
       imports:
