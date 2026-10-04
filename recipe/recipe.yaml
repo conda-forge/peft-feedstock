@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: peft
-  version: 0.21.1
+  version: 0.21.2
   python_min: '3.10'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/peft-${{ version }}.tar.gz
-  sha256: 95f239f84da1919a6d0c64c4049650a6a79804e3a87c78f35c597da771e31f68
+  sha256: b803ccfb3f3f316004d850284306687833a2235ea278fb56abc856203456142e
 
 build:
   number: 0
